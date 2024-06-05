@@ -534,6 +534,7 @@ function on_script_unload() {
 		window.NotifyOthers(`bio_scriptUnload${ppt.serverName}`, 0);
 		timer.clear(timer.img);
 	}
+	allMusicReq.abortRequest();
 	but.on_script_unload();
 	txt.deactivateTooltip();
 }
