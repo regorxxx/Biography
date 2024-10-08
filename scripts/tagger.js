@@ -291,7 +291,7 @@ class Tagger {
 						if (localeTag.length && !/\s*in\s/.test(localeTag[0])) localeTag.shift();
 						if (localeTag.length && /\s*in\s/.test(localeTag[0])) localeTag[0] = localeTag[0].split(/\s*in\s/)[1].trim();
 						if (!locale[i] && notify) locale[i] = localeTag;
-						if (!locale[i].length) locale[i] = '';
+						if (!locale[i] || !locale[i].length) locale[i] = '';
 					}
 				}
 			} else {
