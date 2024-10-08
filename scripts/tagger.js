@@ -398,7 +398,7 @@ class Tagger {
 				artist: artists[0],
 				album: albums[0],
 				handle: handles[0],
-				selectionMode: !notifyFocus ? 'Prefer nowplaying' : 'Follow selected track (playlist)',
+				selectionMode: !panel.id.focus ? 'Prefer nowplaying' : 'Follow selected track (playlist)',
 				tags: tags[0]
 			});
 		}
