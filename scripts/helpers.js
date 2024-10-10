@@ -315,8 +315,8 @@ class Helpers {
 	save(fn, text, bom) {
 		try {
 			const success = utils.WriteTextFile(fn, text, bom);
-			if (!sucess && fn.length >= 256) {
-				fb.ShowPopupMessage('Script is trying to save a file in a path containing more than 256 chars which leads to problems on Windows systems.\n\nPath:\n' + fn + '\n\nTo avoid this problem, install your foobar portable installation at another path (with less nesting) or change the the cache folders at \'biography.cfg\'.')
+			if (!success && fn.length >= 256) {
+				fb.ShowPopupMessage('Script is trying to save a file in a path containing more than 256 chars which leads to problems on Windows systems.\n\nPath:\n' + fn + '\n\nTo avoid this problem, install your foobar portable installation at another path (with less nesting) or change the cache TitleFormat folders path at \'biography.cfg\'.')
 			}
 		} catch (e) {
 			this.trace('error saving: ' + fn);
